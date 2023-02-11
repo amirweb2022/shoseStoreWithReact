@@ -1,8 +1,14 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useLikeActions } from "../../../context/Provider/ProductLikeProvider";
 const Product = ({ item }) => {
   const [like, setLike] = useState(false);
+  const dispatch = useLikeActions();
+  const clickHandler = (product) => {
+    setLike(!like);
+    dispatch({ type: "ADD_TO_FAVORITE", payload: product, liked: !like });
+  };
   return (
     <div className="bg-white shadow-lg shadow-gray-400 my-4 md:w-1/3 lg:w-1/4 rounded-lg overflow-hidden md:ml-3">
       <Link to={`/shop/${item.id}`}>
@@ -17,7 +23,7 @@ const Product = ({ item }) => {
       <div className="p-2">
         <Link to={`/shop/${item.id}`}>
           <span className="text-gray-500 text-xs">نام محصول : </span>
-          <span className="text-slate-700 text-sm font-bold">
+          <span className="text-slate-700 text-sm font-bold hover:text-blue-400 transition-all duration-200">
             {item.productName}
           </span>
         </Link>
@@ -27,7 +33,7 @@ const Product = ({ item }) => {
           whileTap={{ scale: 1.1 }}
           whileHover={{ scale: 1.2 }}
           className="bg-blue-500 p-2 rounded-full shadow-lg shadow-blue-400"
-          onClick={() => setLike(!like)}
+          onClick={() => clickHandler(item)}
         >
           <span>
             <svg

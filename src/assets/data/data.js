@@ -14,7 +14,6 @@ const products = [
         image: productImg1,
         brand: "sneaker",
         price: 1000000,
-        liked: false,
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -26,7 +25,6 @@ const products = [
         image: productImg2,
         brand: "sneaker",
         price: 950000,
-        liked: false,
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -38,7 +36,6 @@ const products = [
         image: productImg3,
         brand: "sneaker",
         price: 1500000,
-        liked: false,
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -50,7 +47,6 @@ const products = [
         image: productImg4,
         brand: "sneaker",
         price: 1200000,
-        liked: false,
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -62,7 +58,6 @@ const products = [
         image: productImg5,
         brand: "sneaker",
         price: 1120000,
-        liked: false,
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -74,7 +69,6 @@ const products = [
         image: productImg6,
         brand: "nike",
         price: 2120000,
-        liked: false,
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -86,7 +80,6 @@ const products = [
         image: productImg7,
         brand: "nike",
         price: 1020000,
-        liked: false,
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -98,7 +91,6 @@ const products = [
         image: productImg8,
         brand: "nike",
         price: 1025000,
-        liked: false,
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -110,7 +102,6 @@ const products = [
         image: productImg9,
         brand: "nike",
         price: 1125000,
-        liked: false,
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:

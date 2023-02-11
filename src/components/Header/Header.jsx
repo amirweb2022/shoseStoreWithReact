@@ -21,9 +21,9 @@ const Header = () => {
       >
         {/* menu in size desktop */}
         <ul className="hidden md:flex justify-center items-center">
-          {nav__link.map((nav) => {
+          {nav__link.map((nav , index) => {
             return (
-              <li className="ml-5">
+              <li className="ml-5" key={index}>
                 <NavLink
                   to={nav.to}
                   className={(navClass) =>
@@ -161,9 +161,9 @@ const Header = () => {
             {/* menu mobile */}
             <div>
               <ul className="flex justify-start items-start flex-col">
-                {nav__link.map((nav) => {
+                {nav__link.map((nav , index) => {
                   return (
-                    <li className="p-3 w-full">
+                    <li className="p-3 w-full" key={index}>
                       <NavLink
                         to={nav.to}
                         className={(navClass) =>
