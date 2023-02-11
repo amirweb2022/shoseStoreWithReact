@@ -12,7 +12,7 @@ const Header = () => {
     menuRef.current.classList.toggle("hidden");
   };
   return (
-    <header className="w-full sticky top-0 md:top-3 z-10 max-w-5xl mx-auto">
+    <header className="w-full sticky top-0 md:top-3 z-10 max-w-6xl mx-auto">
       <nav
         className="px-4 py-6 flex text-slate-600 bg-white
       shadow-md shadow-blue-400
@@ -64,8 +64,28 @@ const Header = () => {
           </span>
         </button>
 
-        {/* login && cart */}
+        {/* login && cart && liked */}
         <ul className="flex justify-center items-center">
+          <li className="ml-4">
+            <NavLink to="/favorite">
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-7 h-7 stroke-red-500"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                  />
+                </svg>
+              </span>
+            </NavLink>
+          </li>
           <li className="ml-3">
             <NavLink to="/cart">
               <span className="relative">
@@ -148,7 +168,7 @@ const Header = () => {
                         to={nav.to}
                         className={(navClass) =>
                           navClass.isActive
-                            ? "bg-white text-slate-600 shadow-md focus:ring-2 focus:ring-blue-300 focus:ring-offset-4 focus:ring-offset-white shadow-white font-bold inline-block w-full pr-2 py-2 rounded-full transition-all duration-150"
+                            ? "bg-white text-slate-600 shadow-md ring-2 ring-blue-300 ring-offset-4 ring-offset-white shadow-white font-bold inline-block w-full pr-2 py-2 rounded-full transition-all duration-150"
                             : "text-white w-full inline-block"
                         }
                       >

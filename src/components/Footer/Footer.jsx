@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="w-screen p-2 bg-slate-100 shadow-md">footer</footer>
+    <footer className="w-full p-2 shadow-md">footer</footer>
   );
 };
 
