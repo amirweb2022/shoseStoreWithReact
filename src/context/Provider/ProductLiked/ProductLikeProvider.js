@@ -1,4 +1,4 @@
-import { useContext, useReducer, createContext, useEffect } from "react";
+import { useContext, useReducer, createContext } from "react";
 import likeReducer from "./ProductLikeReducer";
 const LikeContext = createContext();
 const LikeContextDispatcher = createContext();

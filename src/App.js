@@ -1,4 +1,4 @@
-import LikeProvider from "./context/Provider/ProductLikeProvider";
+import LikeProvider from "./context/Provider/ProductLiked/ProductLikeProvider";
 import Layout from "./Layout/Layout";
 
 function App() {
