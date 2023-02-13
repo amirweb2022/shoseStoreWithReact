@@ -14,6 +14,7 @@ const products = [
         image: productImg1,
         brand: "sneaker",
         price: 1000000,
+        sizes : [43,38,44,42,41],
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -25,6 +26,7 @@ const products = [
         image: productImg2,
         brand: "sneaker",
         price: 950000,
+        sizes : [43,38,44,42,37],
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -36,6 +38,7 @@ const products = [
         image: productImg3,
         brand: "sneaker",
         price: 1500000,
+        sizes : [43,44,42,41,37],
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -47,6 +50,7 @@ const products = [
         image: productImg4,
         brand: "sneaker",
         price: 1200000,
+        sizes : [38,44,42,41,37],
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -58,6 +62,7 @@ const products = [
         image: productImg5,
         brand: "sneaker",
         price: 1120000,
+        sizes : [43,38,42,41,37],
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -69,6 +74,7 @@ const products = [
         image: productImg6,
         brand: "nike",
         price: 2120000,
+        sizes : [43,38,44,42,37],
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -80,6 +86,7 @@ const products = [
         image: productImg7,
         brand: "nike",
         price: 1020000,
+        sizes : [43,38,44,42,37],
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -91,6 +98,7 @@ const products = [
         image: productImg8,
         brand: "nike",
         price: 1025000,
+        sizes : [43,44,42,41],
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:
@@ -102,6 +110,7 @@ const products = [
         image: productImg9,
         brand: "nike",
         price: 1125000,
+        sizes : [43,38,44],
         shortDesc:
             "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ",
         description:

@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  useLike,
   useLikeActions,
 } from "../../../context/Provider/ProductLiked/ProductLikeProvider";
 const Product = ({ item }) => {

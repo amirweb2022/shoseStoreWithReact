@@ -7,11 +7,16 @@ import { useState } from "react";
 import { useEffect } from "react";
 const HomePage = () => {
   const [sneakerProduct, setSneakerProduct] = useState([]);
+  const [nikeProduct, setNikeProduct] = useState([]);
   useEffect(() => {
     const filterdSneakerProducts = proudcts.filter(
       (product) => product.brand === "sneaker"
     );
+    const filterdNikeProducts = proudcts.filter(
+      (product) => product.brand === "nike"
+    );
     setSneakerProduct(filterdSneakerProducts);
+    setNikeProduct(filterdNikeProducts);
   }, []);
   return (
     <>
@@ -42,6 +47,15 @@ const HomePage = () => {
             <h1>محصولات اسنیکر</h1>
           </div>
           <ProductsList data={sneakerProduct}/>
+        </div>
+      </section>
+      {/* ProdutsList Nike */}
+      <section className="max-w-6xl mx-auto w-full my-4">
+        <div className="md:mx-auto md:w-4/5 lg:w-full h-full">
+          <div className="w-full text-center my-7 text-2xl text-slate-600 font-bold">
+            <h1>محصولات نایک</h1>
+          </div>
+          <ProductsList data={nikeProduct}/>
         </div>
       </section>
 
