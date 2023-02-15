@@ -1,14 +1,13 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import {
-  useLikeActions,
-} from "../../../context/Provider/ProductLiked/ProductLikeProvider";
+import { toPersianNum } from "../../../utils/utils";
+import { useLikeActions } from "../../../context/Provider/ProductLiked/ProductLikeProvider";
 const Product = ({ item }) => {
-  const [like, setLike] = useState();
+  const [like, setLike] = useState(false);
   const dispatch = useLikeActions();
   const clickHandler = (product) => {
-    setLike(!like);
+    setLike(!false);
     dispatch({ type: "ADD_TO_FAVORITE", payload: product, liked: !like });
   };
   return (
@@ -51,9 +50,7 @@ const Product = ({ item }) => {
           </span>
         </motion.button>
         <div className="text-sm">
-          <span className="ml-1 text-slate-700 font-bold">
-            {item.price.toLocaleString()}
-          </span>
+          <span className="ml-1 text-slate-700 font-bold">{toPersianNum(item.price)}</span>
           <span className="text-gray-500">تومان</span>
         </div>
       </div>
