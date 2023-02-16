@@ -2,6 +2,7 @@ import ForwardLink from "../components/ForwardLink/ForwardLink";
 import ForwardLinkSection from "../components/ForwardLinkSection/ForwardLinkSection";
 import ProductList from "../components/ProductsList/ProductsList";
 import { useLike } from "../context/Provider/ProductLiked/ProductLikeProvider";
+import CartData from "../components/CartData/CartData"
 const ProductLikeListPage = () => {
   const { likedProduct } = useLike();
   const filterdLikedProduct = likedProduct.filter((item) => item.like === true);
@@ -20,6 +21,7 @@ const ProductLikeListPage = () => {
           Not Product Liked
         </h1>
       )}
+      <CartData />
     </div>
   );
 };

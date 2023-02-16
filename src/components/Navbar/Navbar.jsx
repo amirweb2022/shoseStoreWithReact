@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
+import { useCart } from "../../context/Provider/Cart/CartProvider";
 import { useRef } from "react";
 const Navbar = ({ nav__link }) => {
+  const { cart } = useCart();
   const menuRef = useRef(null);
   const menuToggle = () => {
     menuRef.current.classList.toggle("hidden");
@@ -76,7 +78,7 @@ const Navbar = ({ nav__link }) => {
           </svg>
           {/* badge */}
           <span className="absolute flex justify-center items-center text-sm -right-2 -top-2 bg-red-600 text-white w-5 h-5 rounded-full">
-            0
+            {cart.length}
           </span>
         </NavLinkMenu>
 
@@ -99,7 +101,7 @@ const Navbar = ({ nav__link }) => {
       </ul>
 
       <section
-        className="hidden fixed w-full h-screen top-0 z-20 right-0 backdrop-blur-sm bg-white/20 md:hidden"
+        className="hidden fixed w-full h-screen top-0 z-30 right-0 backdrop-blur-sm bg-white/20 md:hidden"
         ref={menuRef}
         onClick={menuToggle}
       >

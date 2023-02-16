@@ -2,6 +2,7 @@ import proudcts from "../assets/data/data";
 import { useState, useEffect } from "react";
 import CommonSection from "../components/CommonSection/CommonSection";
 import ProductListSection from "../components/ProductListSection/ProductListSection";
+import CartData from "../components/CartData/CartData";
 const HomePage = () => {
   const [sneakerProduct, setSneakerProduct] = useState([]);
   const [nikeProduct, setNikeProduct] = useState([]);
@@ -22,6 +23,8 @@ const HomePage = () => {
       <ProductListSection ProductData={sneakerProduct} title="محصولات اسنیکر"/>
       {/* ProdutsList Nike */}
       <ProductListSection ProductData={nikeProduct} title="محصولات نایک" />
+      {/* Cart Data section in mobile */}
+      <CartData />
     </>
   );
 };

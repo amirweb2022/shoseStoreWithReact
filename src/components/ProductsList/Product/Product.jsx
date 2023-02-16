@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { toPersianNum } from "../../../utils/utils";
 import { useLikeActions } from "../../../context/Provider/ProductLiked/ProductLikeProvider";
 const Product = ({ item }) => {
   const [like, setLike] = useState(false);
@@ -50,7 +49,9 @@ const Product = ({ item }) => {
           </span>
         </motion.button>
         <div className="text-sm">
-          <span className="ml-1 text-slate-700 font-bold">{toPersianNum(item.price)}</span>
+          <span className="ml-1 text-slate-700 font-bold">
+            {item.price.toLocaleString("fa-IR")}
+          </span>
           <span className="text-gray-500">تومان</span>
         </div>
       </div>

@@ -1,14 +1,34 @@
 import { Link } from "react-router-dom";
 import { useQuery } from "../../hooks/useQuery";
-import { toPersianNum } from "../../utils/utils";
 import { useEffect } from "react";
+import { toast } from "react-toastify";
+import { useCartActions } from "../../context/Provider/Cart/CartProvider";
 const ProductDetail = ({ product }) => {
   const { image, productName, brand, price, sizes, id, description } = product;
   const query = useQuery();
+  const dispatch = useCartActions();
   const sizeQuery = query.get("size") || "";
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [product]);
+  const addToCart = () => {
+    if (sizeQuery) {
+      dispatch({
+        type: "ADD_TO_CART",
+        payload: {
+          id,
+          image,
+          productName,
+          brand,
+          price,
+          size: sizeQuery,
+        },
+      });
+      toast.success("محصول به سبد خرید اضافه شد");
+    } else {
+      toast.info("سایز رو انتخاب کنید");
+    }
+  };
   return (
     <section className="w-full mt-4 px-2 mb-4 max-w-6xl mx-auto">
       <div className="md:w-4/5 lg:w-11/12 md:mx-auto flex justify-center flex-col lg:flex-row ">
@@ -107,11 +127,14 @@ const ProductDetail = ({ product }) => {
             </div>
             <div className="text-left w-full mt-2">
               <h3 className="text-lg text-slate-600 font-bold">
-                {toPersianNum(price)}
+                {price.toLocaleString("fa-IR")}
               </h3>
             </div>
             <div className="w-full mt-3">
-              <button className="w-full bg-blue-500 text-white py-3 rounded-md shadow-md shadow-blue-500">
+              <button
+                className="w-full bg-blue-500 text-white py-3 rounded-md shadow-md shadow-blue-500"
+                onClick={addToCart}
+              >
                 اضافه به سبد خرید
               </button>
             </div>

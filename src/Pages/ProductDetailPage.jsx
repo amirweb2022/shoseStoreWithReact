@@ -4,6 +4,7 @@ import ForwardLink from "../components/ForwardLink/ForwardLink";
 import ForwardLinkSection from "../components/ForwardLinkSection/ForwardLinkSection";
 import ProductDetail from "../components/ProductDetail/ProductDetail";
 import ProductListSection from "../components/ProductListSection/ProductListSection";
+import CartData from "../components/CartData/CartData"
 const ProductDetailPage = () => {
   const { id } = useParams();
   const product = products.find((item) => item.id === id);
@@ -25,6 +26,8 @@ const ProductDetailPage = () => {
       <ProductDetail product={product} />
 
       <ProductListSection  ProductData={relatedProducts} title="محصولات مشابه"/>
+
+      <CartData />
     </div>
   );
 };

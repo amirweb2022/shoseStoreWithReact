@@ -1,6 +1,9 @@
+import CartData from "../components/CartData/CartData"
 const ShopPage = () => {
     return ( 
-        <div>فروشگاه</div>
+        <div>فروشگاه
+            <CartData />
+        </div>
      );
 }
  
