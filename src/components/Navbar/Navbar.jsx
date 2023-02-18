@@ -1,6 +1,8 @@
 import { NavLink } from "react-router-dom";
 import { useCart } from "../../context/Provider/Cart/CartProvider";
 import { useRef } from "react";
+import Menu from "../../common/Menu"
+import NavLinkMenu from "../../common/NavLinkMenu"
 const Navbar = ({ nav__link }) => {
   const { cart } = useCart();
   const menuRef = useRef(null);
@@ -154,34 +156,3 @@ const Navbar = ({ nav__link }) => {
 };
 
 export default Navbar;
-export const Menu = ({ navlink }) => {
-  return (
-    <ul className="hidden md:flex justify-center items-center">
-      {navlink.map((nav, index) => {
-        return (
-          <li className="ml-5" key={index}>
-            <NavLink
-              to={nav.to}
-              className={(navClass) =>
-                navClass.isActive
-                  ? "bg-blue-500 text-white p-2 px-4 rounded-3xl transition-all duration-100"
-                  : ""
-              }
-            >
-              {nav.display}
-            </NavLink>
-          </li>
-        );
-      })}
-    </ul>
-  );
-};
-export const NavLinkMenu = ({ to, children, relative }) => {
-  return (
-    <li className="ml-4">
-      <NavLink to={to}>
-        <span className={relative}>{children}</span>
-      </NavLink>
-    </li>
-  );
-};
