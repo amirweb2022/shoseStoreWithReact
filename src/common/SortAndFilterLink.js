@@ -13,7 +13,8 @@ const SortAndFilterLink = ({ item }) => {
             <NavLink
                 onClick={() => clickHandler(item)}
                 to={item.to}
-                className="w-full bg-blue-600 text-white inline-block rounded-full py-2 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white"
+                className="w-full bg-blue-600 text-white inline-block rounded-full py-2 
+                focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white md:ml-3 md:w-3/5"
             >
                 {item.text}
             </NavLink>

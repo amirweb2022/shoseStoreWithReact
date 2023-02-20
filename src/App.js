@@ -4,16 +4,19 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import CartProvider from "./context/Provider/Cart/CartProvider";
 import ProductsProvider from "./context/Provider/Products/ProductsProvider"
+import AuthProvider from "./context/Provider/Auth/AuthProvider";
 function App() {
   return (
-    <CartProvider>
-      <LikeProvider>
-        <ToastContainer />
-        <ProductsProvider>
-          <Layout />
-        </ProductsProvider>
-      </LikeProvider>
-    </CartProvider>
+    <AuthProvider>
+      <CartProvider>
+        <LikeProvider>
+          <ProductsProvider>
+            <ToastContainer />
+            <Layout />
+          </ProductsProvider>
+        </LikeProvider>
+      </CartProvider>
+    </AuthProvider>
   );
 }
 

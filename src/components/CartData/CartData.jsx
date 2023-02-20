@@ -11,7 +11,7 @@ const CartData = () => {
     <section className="fixed bottom-0 z- w-full bg-white shadow-lg shadow-slate-600 flex justify-between items-center px-2 py-3 md:hidden">
       <div className="w-1/2">
         <button className="bg-blue-500 text-white shadow-md shadow-blue-400 py-2 w-full rounded-md">
-          <Link to="/login?redirect=checkout">ادامه سفارش</Link>
+          <Link to="/auth?redirect=checkout">ادامه سفارش</Link>
         </button>
       </div>
       <div className="w-1/2 text-left flex justify-end items-center">

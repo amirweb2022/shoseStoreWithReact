@@ -6,6 +6,7 @@ import ButtonSortAndFilter from "../common/ButtonSortAndFilter";
 import { useRef } from "react";
 import ProductListSection from "../components/ProductListSection/ProductListSection";
 import { useProduct } from "../context/Provider/Products/ProductsProvider";
+import FilterAndSort from "../components/FilterAndSort/FilterAndSort";
 const ShopPage = () => {
   const product = useProduct();
   const sortRef = useRef(null);
@@ -98,6 +99,7 @@ const ShopPage = () => {
           </div>
         </section>
       </div>
+      <FilterAndSort filter__Link={filter__Link} sort__Link={sort__Link} />
       <ProductListSection ProductData={product} title="" />
       <CartData />
     </section>

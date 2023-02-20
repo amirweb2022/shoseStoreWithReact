@@ -18,7 +18,7 @@ const ProductLikeListPage = () => {
         <ProductList data={filterdLikedProduct} />
       ) : (
         <h1 className="text-lg text-center mt-6 text-slate-800 font-bold">
-          Not Product Liked
+          علاقه مندی خالی است
         </h1>
       )}
       <CartData />
